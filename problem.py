@@ -70,7 +70,7 @@ sys.stdout.flush()
 starttime = time.time()
 for i in range(0,50):
 	current = int(time.time() - starttime)
-	if current > 60:
+	if current > 20:
 		print "too slow..."
 		sys.exit()
 	p.Array = deepcopy(default.Array)

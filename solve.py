@@ -16,7 +16,7 @@ move = [["","r","","d"],
 	["","","","","u","","l","","r"],
 	["","","","","","u","","l"]]
  
-ADDRESS = ""
+ADDRESS = "203.178.135.99"
 PORT = 12001
 
 s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
