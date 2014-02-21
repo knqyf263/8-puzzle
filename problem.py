@@ -68,14 +68,14 @@ p.print_puzzle()
 sys.stdout.flush()
 
 starttime = time.time()
-for i in range(0,50):
+for i in range(2,50):
 	current = int(time.time() - starttime)
 	if current > 20:
 		print "too slow..."
 		sys.exit()
 	p.Array = deepcopy(default.Array)
 	p.shuffle(i * 2)
-	print "\nProblem %d" % (i + 1)
+	print "\nProblem %d" % (i - 1)
 	p.print_puzzle()
 	sys.stdout.flush()
 	if problem():
