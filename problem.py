@@ -16,7 +16,7 @@ def problem():
 	        s = sys.stdin.readline()
 		s = s.rstrip()
 		if s == 'exit':
-			break
+			return False
 		elif s == 'l':
 			if space_index[1] == 0:
 				print "Invalid"
@@ -68,18 +68,21 @@ p.print_puzzle()
 sys.stdout.flush()
 
 starttime = time.time()
-for i in range(2,50):
+for i in range(1,50):
 	current = int(time.time() - starttime)
 	if current > 20:
 		print "too slow..."
 		sys.exit()
 	p.Array = deepcopy(default.Array)
 	p.shuffle(i * 2)
-	print "\nProblem %d" % (i - 1)
+	print "\nProblem %d" % (i)
 	p.print_puzzle()
 	sys.stdout.flush()
 	if problem():
 		continue
+	else:
+		print "see you..."
+		sys.exit()
 
 print "flag:8puzzle is fun!!"		
 sys.exit()
